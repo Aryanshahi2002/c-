@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace  std;
+class pyramid
+{
+	int r,T,show,n;
+	public:
+		pyramid()
+		{
+			n=0;
+		}
+		pyramid(int s)
+		{
+		n=s;
+		}
+		void sol()
+		{
+			for(r=1;r<=n;r++)
+			{
+				for(T=1;T<=n;T++)
+				{
+					cout<<" ";
+				}
+				n--;
+				for(show=1;show<=r;show++)
+				{
+					cout<<" "<<r;
+				}
+				cout<<endl;
+			}
+		}
+};
+int main()
+{
+	pyramid obj1(8);
+	pyramid obj2(7);
+	cout<<"first pyramid"<<endl;
+	obj1.sol();
+	cout<<"second pyramid"<<endl;
+	obj2.sol();
+}
