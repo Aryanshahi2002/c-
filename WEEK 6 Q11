@@ -1,0 +1,33 @@
+    #include<iostream>
+    using namespace std;
+    float T_Volume(int,int);
+    float T_Volume(float);
+    int T_Volume(int);
+     
+    int main()
+    {
+    	int r,h,a;
+    	float r1;
+        cout<<"Enter radius and height of a cylinder:"<<endl;
+    	cin>>r>>h;
+    	cout<<"Enter side of cube:"<<endl;
+    	cin>>a;
+        cout<<"Enter radius of sphere:"<<endl;
+    	cin>>r1;
+    	cout<<" Volume of cylinder is"<<T_Volume(r,h)<<endl;
+    	cout<<" Volume of cube is"<<T_Volume(a)<<endl;
+        cout<<"Volume of sphere is"<<T_Volume(r1)<<endl;
+        return 0;
+    }
+    float T_Volume(int r,int h)
+    {
+        return(3.14*r*r*h);
+    }
+    float T_Volume(float r1)
+    {
+        return((4*3.14*r1*r1*r1)/3);
+    }
+    int T_Volume(int a)
+    {
+        return(a*a*a);
+    }
