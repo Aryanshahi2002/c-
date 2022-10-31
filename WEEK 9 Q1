@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+template<class b>;
+void Sort(b arr[], b n)
+{
+	b i, key, j;
+	for (i = 1; i < n; i++)
+	{
+		key = arr[i];
+		j = i - 1;
+
+
+		while (j >= 0 && arr[j] > key)
+		{
+			arr[j + 1] = arr[j];
+			j = j - 1;
+		}
+		arr[j + 1] = key;
+	}
+}
+
+void printArray(b arr[], b n)
+{
+	b i;
+	for (i = 0; i < n; i++)
+		cout << arr[i] << " ";
+	cout << endl;
+}
+
+// Driver code
+int main()
+{
+	b arr[] = { 1, 5, 8, 9, 6, 7, 3, 4, 2, 0 };
+	int N =10;
+
+	Sort(arr, N);
+	cout<<"array after using  sort:"<<endl;
+	printArray(arr, N);
+
+	return 0;
+}
+
+
